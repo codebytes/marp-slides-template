@@ -1,7 +1,7 @@
 ---
 marp: true
 theme: default
-footer: 'https://chris-ayers.com'
+footer: 'https://example.com'
 style: |
   .columns {
     display: grid;
