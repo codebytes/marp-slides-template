@@ -22,6 +22,7 @@ style: |
 ---
 
 # My Presentation
+![bg right](https://picsum.photos/800/600)
 
 ---
 
