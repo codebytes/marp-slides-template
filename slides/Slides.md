@@ -21,47 +21,66 @@ style: |
   @import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
 ---
 
-![bg](./img/background.jpg)
-
-# Slide Deck
+# My Presentation
 
 ---
 
-![bg left:40%](./img/portrait.png)
+## Slide 1
 
-## Chris Ayers
-### Senior Customer Engineer<br>Microsoft
-
-<i class="fa-brands fa-twitter"></i> Twitter: 
-<i class="fa-brands fa-mastodon"></i> Mastodon: 
-<i class="fa-brands fa-linkedin"></i> LinkedIn: 
-<i class="fa fa-window-maximize"></i> Blog: 
-<i class="fa-brands fa-github"></i> GitHub: 
+- Item 1
+- Item 2
+- Item 3
 
 ---
 
-# Resources
+## Slide 2
+
+![Image](https://picsum.photos/800/600)
+
+---
+
+## Slide 3
+
+> This is a quote.
+
+---
+
+## Slide 4
+
+| Column 1 | Column 2 |
+| -------- | -------- |
+| Item 1   | Item 2   |
+| Item 3   | Item 4   |
+
+---
+
+## Slide 5
 
 <div class="columns">
 <div>
 
-## Links
+## Left
 
-- 
-- 
-- 
+- 1
+- 2
 
 </div>
 <div>
 
-## Follow 
+## Right
+
+- 3
+- 4
+
+</div>
+</div>
+
+---
+
+## Slide 6
 
 <i class="fa-brands fa-twitter"></i> Twitter: 
 <i class="fa-brands fa-mastodon"></i> Mastodon: 
 <i class="fa-brands fa-linkedin"></i> LinkedIn: 
 <i class="fa fa-window-maximize"></i> Blog: 
 <i class="fa-brands fa-github"></i> GitHub: 
-
-</div>
-</div>
-
