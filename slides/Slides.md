@@ -29,8 +29,8 @@ style: |
 
 ![bg left:40%](./img/portrait.png)
 
-## Chris Ayers
-### Senior Customer Engineer<br>Microsoft
+## X
+### XX<br>XXX
 
 <i class="fa-brands fa-twitter"></i> Twitter: 
 <i class="fa-brands fa-mastodon"></i> Mastodon: 
