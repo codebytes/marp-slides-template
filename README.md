@@ -10,6 +10,8 @@ More specifically, the created site:
 
 - uses marp
 - uses the [GitHub Pages / Actions workflow] to build and publish the site on GitHub Pages.
+- has a DevContainer/CodeSpace configured with Marp and Markdown preview extensions ready
+  - chrome is also added as it's needed in linux to make powerpoint slides
 
 To get started with creating a site, just click "[use this template]"!
 
