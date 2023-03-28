@@ -5,6 +5,7 @@
 This is a *minimal* template to create a [marp] site that:
 
 - can be built and published on [GitHub Pages];
+**See directions below**
 
 More specifically, the created site:
 
