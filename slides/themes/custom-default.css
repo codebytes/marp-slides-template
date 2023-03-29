@@ -1,0 +1,9 @@
+/* custom-default.css */
+/* @theme custom-default */
+
+@import 'default';
+
+section {
+  /* Override default background */
+  background: #fff;
+}
