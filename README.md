@@ -7,7 +7,7 @@ Create a Marp presentation site that can be built and published on [GitHub Pages
 - Marp integration
 - A GitHub Pages / Actions workflow for build and publish
 - A DevContainer/CodeSpace configuration with Marp and Markdown preview extensions
-- Chrome installation for PowerPoint slide creation on Linux
+- Chrome installation for PDF and PowerPoint slide creation on Linux
 
 ## Customization
 
