@@ -1,58 +1,67 @@
-# marp-slides-template
+# Marp Slides Template
 
 [Use this template!](https://github.com/codebytes/marp-slides-template/generate)
 
-This is a *minimal* template to create a [marp] site that:
+Create a Marp presentation site that can be built and published on [GitHub Pages] using this minimal template. The site features:
 
-- can be built and published on [GitHub Pages];
-**See directions below**
-
-More specifically, the created site:
-
-- uses marp
-- uses the [GitHub Pages / Actions workflow] to build and publish the site on GitHub Pages.
-- has a DevContainer/CodeSpace configured with Marp and Markdown preview extensions ready
-  - chrome is also added as it's needed in linux to make powerpoint slides
-
-To get started with creating a site, just click "[use this template]"!
-
-After completing the creation of your new site on GitHub, update it as needed:
-
-## Replace the content of the template pages
-
-Update the following files to your own content:
-
-- `slides/Slides.md` (your new presentation)
-- `README.md` (information for those who access your site repo on GitHub)
-
-
-## Publishing your site on GitHub Pages
-
-1.  In your newly created repo on GitHub:
-    - go to the `Settings` tab -> `Pages` -> `Build and deployment`, then select `Source`: `GitHub Actions`.
-    - if there were any failed Actions, go to the `Actions` tab and click on `Re-run jobs`.
-
-## Building and previewing your site locally
-
-1. Install [Visual Studio Code](https://code.visualstudio.com/) if you haven't already.
-2. Install the [Marp for VS Code extension](https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode) from the Visual Studio Code marketplace.
-3. Open the slides/Slide.md file in VS Code.
+- Marp integration
+- A GitHub Pages / Actions workflow for build and publish
+- A DevContainer/CodeSpace configuration with Marp and Markdown preview extensions
+- Chrome installation for PowerPoint slide creation on Linux
 
 ## Customization
 
-You're free to customize sites that you create with this template, however you like!
+Feel free to customize the sites created with this template as you like!
+
+## Getting Started
+
+1. Click "[use this template]" to create a new site.
+2. Update the content of `slides/Slides.md` with your own presentation.
+
+## Custom Themes
+
+This template includes four custom themes in the `slides/themes` folder:
+
+- custom
+- custom-default (based on the built-in default theme)
+- custom-gaia (based on the built-in gaia theme)
+- custom-uncover (based on the built-in uncover theme)
+
+To use a custom theme, edit the relevant css file and add its reference in the front matter of `Slides.md`. For example, to use `custom-default` add the following to the `Slides.md` front matter:
+
+```markdown
+---
+marp: true
+theme: custom-default
+---
+```
+
+For additional themes, add them to the devcontainer and follow the [Marp custom theme documentation](https://marpit.marp.app/theme-css).
+
+## Publishing on GitHub Pages
+
+1. In your GitHub repo, navigate to `Settings` > `Pages` > `Build and deployment`.
+2. Select `Source`: `GitHub Actions`.
+3. If any Actions failed, go to the `Actions` tab and click on `Re-run jobs`.
+
+## Local Build and Preview
+
+1. Install [Visual Studio Code](https://code.visualstudio.com/).
+2. Install the [Marp for VS Code extension](https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode).
+3. Open `slides/Slides.md` in VS Code.
 
 ## Licensing and Attribution
 
-This repository is licensed under the [MIT License]. You are generally free to reuse or extend upon this code as you see fit; just include the original copy of the license (which is preserved when you "make a template"). While it's not necessary, we'd love to hear from you if you do use this template, and how we can improve it for future use!
-
-The deployment GitHub Actions workflow is heavily based on GitHub's mixed-party [starter workflows]. A copy of their MIT License is available in [actions/starter-workflows].
+This repository is licensed under the [MIT License]. Reuse or extend the code as you wish, but include the original license. The deployment GitHub Actions workflow is based on GitHub's starter workflows.
 
 ## Resources
 
-- [GitHub Pages](https://docs.github.com/en/pages)
-- [GitHub Pages / Actions workflow](https://github.blog/changelog/2022-07-27-github-pages-custom-github-actions-workflows-beta/)
 - [Use this template](https://github.com/codebytes/marp-slides-template/generate)
-- [MIT License](https://en.wikipedia.org/wiki/MIT_License)
-- [Starter workflows](https://github.com/actions/starter-workflows/blob/main/pages/jekyll.yml)
-- [Actions/starter-workflows](https://github.com/actions/starter-workflows/blob/main/LICENSE)
+
+- GitHub Pages: [https://docs.github.com/en/pages](https://docs.github.com/en/pages)
+
+- CommonMark markdown syntax: [https://commonmark.org/help/](https://commonmark.org/help/)
+
+- Marp Official Repository: [https://github.com/marp-team/marp](https://github.com/marp-team/marp)
+- Marp Official Documentation: [https://marpit.marp.app/markdown](https://marpit.marp.app/markdown)
+- Marp for VS Code Documentation: [https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode](https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode)
