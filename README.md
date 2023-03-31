@@ -5,7 +5,7 @@
 Create a Marp presentation site that can be built and published on [GitHub Pages] using this minimal template. The site features:
 
 - Marp integration
-- A GitHub Pages / Actions workflow for build and publish
+- A GitHub Pages / Actions workflow for build and publish ([See a preview](http://chris-ayers.com/marp-slides-template/))
 - A DevContainer/CodeSpace configuration with Marp and Markdown preview extensions
 - Chrome installation for PDF and PowerPoint slide creation on Linux
 

@@ -21,7 +21,14 @@ style: |
   .fa-mastodon { color: purple; }
   .fa-linkedin { color: blue; }
   .fa-window-maximize { color: skyblue; }
-  
+
+  svg[id^="mermaid-"] { 
+    min-width: 480px; 
+    max-width: 960px; 
+    min-height: 360px; 
+    max-height: 600px; 
+  }
+
   @import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
 ---
 
