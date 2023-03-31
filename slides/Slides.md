@@ -20,23 +20,25 @@ style: |
   
   @import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
 ---
-<script src="https://unpkg.com/mermaid@9.4.3/dist/mermaid.min.js"></script>
-<script>mermaid.initialize({startOnLoad:true});</script>
 
 # My Presentation
 ![bg right](https://picsum.photos/800/600)
 
 ---
 
+<!-- Speaker Notes -->
 ## Slide 1
 
 - Item 1
 - Item 2
 - Item 3
+<!-- Can have multiple on a slide -->
 
 ---
 
 ## Slide 2
+<!-- Can also do a multiline
+comment that will show in notes -->
 
 ![Image](https://picsum.photos/800/600)
 
@@ -90,6 +92,10 @@ style: |
 <i class="fa-brands fa-github"></i> GitHub: 
 
 ---
+
+<!-- Needed for mermaid, can be anywhere in file except frontmatter -->
+<script src="https://unpkg.com/mermaid@9.4.3/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({startOnLoad:true});</script>
 
 # Mermaid
 
