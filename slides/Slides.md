@@ -94,8 +94,10 @@ comment that will show in notes -->
 ---
 
 <!-- Needed for mermaid, can be anywhere in file except frontmatter -->
-<script src="https://unpkg.com/mermaid@9.4.3/dist/mermaid.min.js"></script>
-<script>mermaid.initialize({startOnLoad:true});</script>
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: true });
+</script>
 
 # Mermaid
 
