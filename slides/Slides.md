@@ -20,6 +20,8 @@ style: |
   
   @import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
 ---
+<script src="https://unpkg.com/mermaid@9.4.3/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({startOnLoad:true});</script>
 
 # My Presentation
 ![bg right](https://picsum.photos/800/600)
@@ -55,6 +57,7 @@ style: |
 
 ---
 
+![bg opacity](https://picsum.photos/800/600?image=53)
 ## Slide 5
 
 <div class="columns">
@@ -85,3 +88,15 @@ style: |
 <i class="fa-brands fa-linkedin"></i> LinkedIn: 
 <i class="fa fa-window-maximize"></i> Blog: 
 <i class="fa-brands fa-github"></i> GitHub: 
+
+---
+
+# Mermaid
+
+<div class="mermaid">
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+</div>
