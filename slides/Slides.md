@@ -17,6 +17,10 @@ style: |
     display: block;
     margin: 0 auto;
   }
+  .fa-twitter { color: aqua; }
+  .fa-mastodon { color: purple; }
+  .fa-linkedin { color: blue; }
+  .fa-window-maximize { color: skyblue; }
   
   @import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
 ---
