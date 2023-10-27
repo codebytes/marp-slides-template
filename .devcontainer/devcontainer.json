@@ -5,9 +5,10 @@
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"image": "mcr.microsoft.com/devcontainers/base:bullseye",
 	"features": {
-		"ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
-			"packages": "chromium"
-		}
+		// uncomment this to allow pptx or pdf export
+		// "ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
+		// 	"packages": "chromium"
+		// }
 	},
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
