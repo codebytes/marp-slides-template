@@ -4,13 +4,13 @@ theme: custom-default
 footer: 'https://example.com'
 ---
 
-# My Presentation
+# 1. Sample Presentation
 ![bg right](https://picsum.photos/800/600)
 
 ---
 
 <!-- Speaker Notes -->
-## Slide 1
+## 2. Speaker nots and Lists
 
 - Item 1
 - Item 2
@@ -19,7 +19,7 @@ footer: 'https://example.com'
 
 ---
 
-## Slide 2
+## 3. Speaker notes and images
 <!-- Can also do a multiline
 comment that will show in notes -->
 
@@ -27,13 +27,21 @@ comment that will show in notes -->
 
 ---
 
-## Slide 3
+## 4. Centered images
+
+You can center images
+
+![center](https://picsum.photos/800/600)
+
+---
+
+## 5. Slide 4
 
 > This is a quote.
 
 ---
 
-## Slide 4
+## 6. Tables
 
 | Column 1 | Column 2 |
 | -------- | -------- |
@@ -43,7 +51,7 @@ comment that will show in notes -->
 ---
 
 ![bg opacity](https://picsum.photos/800/600?image=53)
-## Slide 5
+## 7. Columns
 
 <div class="columns">
 <div>
@@ -66,7 +74,7 @@ comment that will show in notes -->
 
 ---
 
-## Slide 6
+## 8. Icons
 
 <i class="fa-brands fa-twitter"></i> Twitter: 
 <i class="fa-brands fa-mastodon"></i> Mastodon: 
@@ -76,17 +84,17 @@ comment that will show in notes -->
 
 ---
 
-# <!--fit--> Large Text
+# 9. <!--fit--> Large Text
 
 ---
 
 <!-- Needed for mermaid, can be anywhere in file except frontmatter -->
 <script type="module">
-  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
   mermaid.initialize({ startOnLoad: true });
 </script>
 
-# Mermaid
+# 10. Mermaid
 
 <div class="mermaid">
 graph TD;
