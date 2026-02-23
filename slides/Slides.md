@@ -1,105 +1,199 @@
 ---
 marp: true
 theme: custom-default
+paginate: true
 footer: 'https://example.com'
+math: mathjax
 ---
 
-# 1. Sample Presentation
+<!-- _paginate: skip -->
+<!-- _footer: "" -->
+<!-- _class: lead -->
+
+# Sample Presentation
+
+A template demonstrating Marp best practices
+
 ![bg right](https://picsum.photos/800/600)
 
 ---
 
-<!-- Speaker Notes -->
-## 2. Speaker nots and Lists
+## Speaker Notes and Lists
 
-- Item 1
-- Item 2
-- Item 3
-<!-- Can have multiple on a slide -->
+<!-- Speaker notes go in HTML comments like this -->
+
+- Use HTML comments for speaker notes
+- Notes are visible in presenter view
+- Keep bullet points concise
+
+<!-- You can have multiple comment blocks on a slide -->
 
 ---
 
-## 3. Speaker notes and images
-<!-- Can also do a multiline
-comment that will show in notes -->
+## Speaker Notes with Images
+
+<!-- Multiline speaker notes work too.
+This will all appear in presenter view. -->
 
 ![Image](https://picsum.photos/800/600)
 
 ---
 
-## 4. Centered images
+## Centered Images
 
-You can center images
+Use `![center]` alt text to center images
 
-![center](https://picsum.photos/800/600)
-
----
-
-## 5. Slide 4
-
-> This is a quote.
+![center](https://picsum.photos/400/300)
 
 ---
 
-## 6. Tables
+## Blockquotes
 
-| Column 1 | Column 2 |
-| -------- | -------- |
-| Item 1   | Item 2   |
-| Item 3   | Item 4   |
+> "Keep slides concise with key points only."
+>
+> — Marp Best Practices
 
 ---
 
-![bg opacity](https://picsum.photos/800/600?image=53)
-## 7. Columns
+## Tables
 
-<div class="columns">
+| Feature | Description |
+|---------|-------------|
+| Themes  | Built-in and custom CSS |
+| Images  | Background and inline |
+| Export  | HTML, PDF, PPTX |
+
+---
+
+<!-- _class: columns -->
+
+## Columns Layout
+
 <div>
 
-## Left
+### Left Column
 
-- 1
-- 2
+- Point 1
+- Point 2
+- Point 3
 
 </div>
 <div>
 
-## Right
+### Right Column
 
-- 3
-- 4
+- Point A
+- Point B
+- Point C
 
 </div>
-</div>
 
 ---
 
-## 8. Icons
+![bg opacity:0.3](https://picsum.photos/800/600?image=53)
 
-<i class="fa-brands fa-twitter"></i> Twitter: 
-<i class="fa-brands fa-mastodon"></i> Mastodon: 
-<i class="fa-brands fa-linkedin"></i> LinkedIn: 
-<i class="fa fa-window-maximize"></i> Blog: 
-<i class="fa-brands fa-github"></i> GitHub: 
+## Background with Opacity
+
+Use `![bg opacity:0.3]` for subtle backgrounds
 
 ---
 
-# 9. <!--fit--> Large Text
+<!-- _class: invert -->
+
+## Dark Slide (Invert)
+
+Use `<!-- _class: invert -->` for dark themed slides
+
+- Great for emphasis
+- Improved contrast for certain content
+- Works with code blocks too
 
 ---
 
-<!-- Needed for mermaid, can be anywhere in file except frontmatter -->
+## Math Equations
+
+Enable with `math: mathjax` in frontmatter
+
+Inline: $E = mc^2$
+
+Block equation:
+
+$$
+\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}
+$$
+
+---
+
+## Social Icons
+
+<i class="fa-brands fa-github"></i> GitHub
+<i class="fa-brands fa-linkedin"></i> LinkedIn
+<i class="fa-brands fa-mastodon"></i> Mastodon
+<i class="fa-brands fa-bluesky"></i> Bluesky
+<i class="fa-brands fa-youtube"></i> YouTube
+<i class="fa fa-window-maximize"></i> Blog
+
+---
+
+# <!--fit--> Auto-fit Text
+
+Use `<!--fit-->` to scale text to slide width
+
+---
+
+<!-- Mermaid.js for diagrams - place script once per deck -->
 <script type="module">
   import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
   mermaid.initialize({ startOnLoad: true });
 </script>
 
-# 10. Mermaid
+## Mermaid Diagrams
 
 <div class="mermaid">
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
+flowchart LR
+    A[Start] --> B{Decision}
+    B -->|Yes| C[Action 1]
+    B -->|No| D[Action 2]
+    C --> E[End]
+    D --> E
 </div>
+
+---
+
+## Code Blocks
+
+```javascript
+// Syntax highlighting works out of the box
+const greeting = (name) => {
+  return `Hello, ${name}!`;
+};
+```
+
+---
+
+<!-- _class: small -->
+
+## Dense Content (Small Text)
+
+Use `<!-- _class: small -->` for slides with more content
+
+| Method | Description | Returns |
+|--------|-------------|---------|
+| `GET` | Retrieve resource | 200 OK |
+| `POST` | Create resource | 201 Created |
+| `PUT` | Update resource | 200 OK |
+| `DELETE` | Remove resource | 204 No Content |
+
+- Additional bullet points fit better
+- More information per slide when needed
+- Use sparingly for readability
+
+---
+
+<!-- _paginate: skip -->
+<!-- _footer: "" -->
+<!-- _class: lead invert -->
+
+# <!--fit--> Thank You!
+
+Questions?

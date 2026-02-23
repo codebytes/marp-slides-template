@@ -2,29 +2,151 @@
 /* @theme custom-default */
 
 @import 'default';
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css';
 
-.columns {
+/* Theme customization via CSS variables (Marp v4+ best practice) */
+:root {
+  --color-background: #ffffff;
+  --color-foreground: #333333;
+  --color-highlight: #0366d6;
+  --color-dimmed: #6a737d;
+}
+
+section {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+}
+
+/* Link styling using theme colors */
+a {
+  color: var(--color-highlight);
+}
+
+/* Lead/title slide styling */
+section.lead {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+section.lead h1 {
+  font-size: 2.5em;
+}
+
+/* Invert class for dark slides */
+section.invert {
+  --color-background: #1a1a2e;
+  --color-foreground: #eaeaea;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+}
+
+section.invert a {
+  color: #58a6ff;
+}
+
+/* Small text class for dense content */
+section.small {
+  font-size: 0.85em;
+}
+
+section.small h2 {
+  font-size: 1.4em;
+}
+
+/* Multi-column layouts using CSS Grid */
+/* Method 1: Using section class (<!-- _class: columns -->) */
+section.columns {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
+  align-items: start;
 }
-.columns3 {
+
+section.columns3 {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
-} 
+  align-items: start;
+}
+
+/* Method 2: Using div wrapper (<div class="columns">) */
+div.columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: start;
+}
+
+div.columns3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: start;
+}
+
+/* Centered images via alt text selector */
 img[alt~="center"] {
   display: block;
   margin: 0 auto;
 }
-.fa-twitter { color: aqua; }
-.fa-mastodon { color: purple; }
-.fa-linkedin { color: blue; }
-.fa-window-maximize { color: skyblue; }
 
-svg[id^="mermaid-"] { 
-  max-width: 960px; 
-  max-height: 600px; 
+/* Font Awesome icon colors */
+.fa-twitter,
+.fa-x-twitter { color: #1da1f2; }
+.fa-mastodon { color: #6364ff; }
+.fa-linkedin { color: #0a66c2; }
+.fa-window-maximize { color: #0366d6; }
+.fa-github { color: #333333; }
+.fa-bluesky { color: #1185fe; }
+.fa-youtube { color: #ff0000; }
+
+/* Mermaid diagram constraints */
+svg[id^="mermaid-"] {
+  max-width: 100%;
+  max-height: 500px;
 }
 
-@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css'
+/* Code block styling */
+pre {
+  background-color: #f6f8fa;
+  border-radius: 6px;
+}
+
+section.invert pre {
+  background-color: #2d2d2d;
+}
+
+/* Blockquote styling */
+blockquote {
+  border-left: 4px solid var(--color-highlight);
+  padding-left: 1rem;
+  color: var(--color-dimmed);
+  font-style: italic;
+}
+
+/* Footer and header styling */
+header, footer {
+  color: var(--color-dimmed);
+}
+
+/* Improved table styling */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  background-color: var(--color-highlight);
+  color: white;
+}
+
+td, th {
+  padding: 0.5rem;
+}
+
+/* Emoji scaling */
+section emoji {
+  font-size: 1.2em;
+}
