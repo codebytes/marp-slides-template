@@ -2,7 +2,7 @@
 /* @theme custom-default */
 
 @import 'default';
-@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css';
+@import 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css';
 
 /* Theme customization via CSS variables (Marp v4+ best practice) */
 :root {
@@ -55,20 +55,57 @@ section.small h2 {
   font-size: 1.4em;
 }
 
-/* Multi-column layouts using CSS Grid */
+/* Multi-column layouts */
 /* Method 1: Using section class (<!-- _class: columns -->) */
 section.columns {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
-  align-items: start;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto auto auto;
+  grid-auto-flow: column;
+  gap: 0 2rem;
+  align-content: center;
+}
+
+section.columns > h1 {
+  grid-column: 1 / -1;
+  grid-row: 1;
+}
+
+/* Preserve Marp footer and pagination positioning */
+section.columns > footer {
+  grid-column: 1 / -1;
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
+}
+
+section.columns::after {
+  position: absolute;
 }
 
 section.columns3 {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
-  align-items: start;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto auto;
+  grid-auto-flow: column;
+  gap: 0 2rem;
+  align-content: center;
+}
+
+section.columns3 > h1 {
+  grid-column: 1 / -1;
+  grid-row: 1;
+}
+
+section.columns3 > footer {
+  grid-column: 1 / -1;
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
+}
+
+section.columns3::after {
+  position: absolute;
 }
 
 /* Method 2: Using div wrapper (<div class="columns">) */

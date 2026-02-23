@@ -65,13 +65,13 @@ Use `![center]` alt text to center images
 
 ---
 
-<!-- _class: columns -->
+# Two-Column Layout
 
-## Columns Layout
+<div class="columns">
 
 <div>
 
-### Left Column
+## Left Column
 
 - Point 1
 - Point 2
@@ -80,13 +80,32 @@ Use `![center]` alt text to center images
 </div>
 <div>
 
-### Right Column
+## Right Column
 
 - Point A
 - Point B
 - Point C
 
 </div>
+</div>
+
+---
+
+<!-- _class: columns -->
+
+# Two-Column Layout (Class)
+
+## Left Column
+
+- Point 1
+- Point 2
+- Point 3
+
+## Right Column
+
+- Point A
+- Point B
+- Point C
 
 ---
 
