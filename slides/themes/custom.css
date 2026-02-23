@@ -1,6 +1,54 @@
 /* custom.css */
 /* @theme custom */
 
+/* Theme customization via CSS variables (Marp v4+ best practice) */
+:root {
+  --color-background: #ffffff;
+  --color-foreground: #333333;
+  --color-highlight: #0366d6;
+  --color-dimmed: #6a737d;
+}
+
 section {
-    background: #fff;
-  }
+  width: 1280px;
+  height: 720px;
+  font-size: 28px;
+  padding: 40px;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-foreground);
+}
+
+a {
+  color: var(--color-highlight);
+}
+
+/* Multi-column layouts using CSS Grid */
+section.columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: start;
+}
+
+section.columns3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: start;
+}
+
+/* Centered images via alt text selector */
+img[alt~="center"] {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Mermaid diagram constraints */
+svg[id^="mermaid-"] {
+  max-width: 100%;
+  max-height: 500px;
+}

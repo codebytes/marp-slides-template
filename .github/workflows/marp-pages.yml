@@ -25,23 +25,36 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
-      - name: Copy images
-        run: mkdir build && cp -R slides/img build/img && cp -R slides/themes build/themes
+      - uses: actions/checkout@v6
+      
+      - name: Setup build directory
+        run: |
+          mkdir -p build
+          cp -R slides/img build/img 2>/dev/null || true
+          cp -R slides/themes build/themes
 
-      - name: Marp Build (README)
+      - name: Marp Build (HTML)
         uses: docker://marpteam/marp-cli:latest
         with:
           args: --theme-set slides/themes -o build/index.html --html -- slides/Slides.md
         env:
           MARP_USER: root:root
+
+      - name: Marp Build (PDF)
+        uses: docker://marpteam/marp-cli:latest
+        with:
+          args: --theme-set slides/themes -o build/Slides.pdf --html --allow-local-files -- slides/Slides.md
+        env:
+          MARP_USER: root:root
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
+        
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          # Upload entire repository
           path: 'build'
+          
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
