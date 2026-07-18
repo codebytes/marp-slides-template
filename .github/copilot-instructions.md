@@ -27,3 +27,8 @@
 - Store images in `slides/img/`.
 - Use CSS variables for theme customization (see `slides/themes/custom-default.css`).
 - Ensure compatibility with Marp CLI v4 for PDF and presentation generation.
+- Before presenting or publishing, review decks for content overflow with the
+  `marp-slide-review` skill (`.github/skills/marp-slide-review/`).
+- For editable architecture/flowchart figures, create `.drawio.svg` files with the
+  `drawio-diagrams` skill (`.github/skills/drawio-diagrams/`) and embed them like
+  images; prefer Mermaid for quick inline diagrams.

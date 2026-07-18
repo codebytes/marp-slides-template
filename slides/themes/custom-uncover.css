@@ -2,7 +2,7 @@
 /* @theme custom-uncover */
 
 @import 'uncover';
-@import 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css';
+@import 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css';
 
 /* Theme customization via CSS variables (Marp v4+ best practice) */
 :root {

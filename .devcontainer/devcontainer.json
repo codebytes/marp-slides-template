@@ -33,7 +33,8 @@
 				"streetsidesoftware.code-spell-checker",
 				"yzhang.markdown-all-in-one",
 				"marp-team.marp-vscode",
-				"bierner.markdown-mermaid"
+				"bierner.markdown-mermaid",
+				"hediet.vscode-drawio"
 			]
 		}
 	}

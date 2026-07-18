@@ -6,8 +6,9 @@ Create a Marp presentation site that can be built and published on [GitHub Pages
 
 - Marp integration with CSS variable-based theming
 - A GitHub Pages / Actions workflow for build and publish ([See a preview](http://chris-ayers.com/marp-slides-template/))
-- A DevContainer/CodeSpace configuration with Marp and Markdown preview extensions
+- A DevContainer/CodeSpace configuration with Marp, Markdown, Mermaid, and draw.io preview extensions
 - Support for PDF and PowerPoint export via Marp CLI v4
+- Copilot skills for reviewing decks for content overflow and authoring editable `.drawio.svg` diagrams
 
 ## Customization
 
@@ -114,6 +115,49 @@ flowchart LR
     A[Start] --> B[End]
 </div>
 ```
+
+## draw.io Diagrams
+
+For diagrams that need pixel-level control and must stay **editable in a visual
+editor**, use editable `.drawio.svg` files (Mermaid remains the best choice for
+quick, text-only diagrams). A `.drawio.svg` renders as a normal image *and*
+reopens fully editable in [draw.io / diagrams.net](https://app.diagrams.net) or
+the Draw.io Integration VS Code extension (included in the devcontainer).
+
+Store them in `slides/img/` and embed like any image:
+
+```markdown
+![center](img/architecture.drawio.svg)
+```
+
+The `drawio-diagrams` Copilot skill (`.github/skills/drawio-diagrams/`) can
+generate one from a small JSON spec — no draw.io install required:
+
+```bash
+node .github/skills/drawio-diagrams/make-drawio-svg.mjs build spec.json -o slides/img/flow.drawio.svg
+```
+
+See the skill's `SKILL.md`, `example.spec.json`, and `example.drawio.svg` for the
+format and a working sample.
+
+## Reviewing Slides for Overflow
+
+Marp renders every slide at a fixed size (1280×720 for 16:9), and content taller
+or wider than that is silently clipped in exports. The `marp-slide-review`
+Copilot skill (`.github/skills/marp-slide-review/`) renders the deck headlessly
+and reports which slides overflow:
+
+```bash
+# One-time tooling (kept out of the repo — node_modules is gitignored)
+npm i -D playwright && npx playwright install chromium
+
+# Review the deck (exits non-zero if any slide overflows — CI friendly)
+node .github/skills/marp-slide-review/check-overflow.mjs slides/Slides.md
+```
+
+The Marp for VS Code extension also flags overflow live in the editor via
+`markdown.marp.diagnostics.slideContentOverflow` (already enabled in
+`.vscode/settings.json`).
 
 ## Publishing on GitHub Pages
 
