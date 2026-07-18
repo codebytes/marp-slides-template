@@ -179,6 +179,18 @@ flowchart LR
 
 ---
 
+## draw.io Diagrams
+
+Editable `.drawio.svg` files render as images and reopen in draw.io
+
+![center](img/pipeline.drawio.svg)
+
+<!-- Built with the drawio-diagrams skill from img/pipeline.spec.json.
+Use Mermaid for quick inline diagrams; use draw.io when the figure must
+stay editable in a visual editor. -->
+
+---
+
 ## Code Blocks
 
 ```javascript
