@@ -14,13 +14,18 @@
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 
-	"postStartCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}",
+	// Mark the workspace as a safe git directory. Run from `/` (not the
+	// workspace) so git never tries to resolve a worktree's .git pointer —
+	// that pointer references a host path that doesn't exist inside the
+	// container and would otherwise fail startup with "not a git repository".
+	// `|| true` keeps a failure from aborting container creation.
+	"postStartCommand": "git -C / config --global --add safe.directory ${containerWorkspaceFolder} || true",
 	
 	// Configure tool-specific properties.
 	"customizations": {
 		"vscode": {
 			"settings": {
-				"markdown.marp.enableHtml": true,
+				"markdown.marp.html": "all",
 				"markdown.marp.mathTypesetting": "mathjax",
 				"markdown.marp.themes": [
 					"./slides/themes/custom.css",
@@ -33,7 +38,8 @@
 				"streetsidesoftware.code-spell-checker",
 				"yzhang.markdown-all-in-one",
 				"marp-team.marp-vscode",
-				"bierner.markdown-mermaid"
+				"bierner.markdown-mermaid",
+				"hediet.vscode-drawio"
 			]
 		}
 	}

@@ -1,0 +1,16 @@
+{
+  "nodes": [
+    { "id": "start", "label": "Start", "x": 200, "y": 40, "width": 140, "height": 50, "fill": "#d5e8d4", "stroke": "#82b366", "rounded": true },
+    { "id": "build", "label": "Build slides\n(Marp CLI)", "x": 200, "y": 140, "width": 140, "height": 60, "fill": "#dae8fc", "stroke": "#6c8ebf" },
+    { "id": "review", "label": "Review for\noverflow", "x": 200, "y": 250, "width": 140, "height": 60, "fill": "#dae8fc", "stroke": "#6c8ebf" },
+    { "id": "ok", "label": "Publish to\nGitHub Pages", "x": 200, "y": 360, "width": 140, "height": 60, "fill": "#d5e8d4", "stroke": "#82b366", "rounded": true },
+    { "id": "fix", "label": "Fix slide", "x": 420, "y": 250, "width": 120, "height": 60, "fill": "#ffe6cc", "stroke": "#d79b00" }
+  ],
+  "edges": [
+    { "source": "start", "target": "build" },
+    { "source": "build", "target": "review" },
+    { "source": "review", "target": "ok", "label": "pass" },
+    { "source": "review", "target": "fix", "label": "overflow" },
+    { "source": "fix", "target": "review" }
+  ]
+}

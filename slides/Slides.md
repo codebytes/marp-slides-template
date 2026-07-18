@@ -3,7 +3,6 @@ marp: true
 theme: custom-default
 paginate: true
 footer: 'https://example.com'
-math: mathjax
 ---
 
 <!-- _paginate: skip -->
@@ -131,8 +130,6 @@ Use `<!-- _class: invert -->` for dark themed slides
 
 ## Math Equations
 
-Enable with `math: mathjax` in frontmatter
-
 Inline: $E = mc^2$
 
 Block equation:
@@ -160,22 +157,33 @@ Use `<!--fit-->` to scale text to slide width
 
 ---
 
-<!-- Mermaid.js for diagrams - place script once per deck -->
-<script type="module">
-  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
-  mermaid.initialize({ startOnLoad: true });
-</script>
-
 ## Mermaid Diagrams
 
-<div class="mermaid">
+<pre class="mermaid">
 flowchart LR
     A[Start] --> B{Decision}
     B -->|Yes| C[Action 1]
     B -->|No| D[Action 2]
     C --> E[End]
     D --> E
-</div>
+</pre>
+
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: true });
+</script>
+
+---
+
+## draw.io Diagrams
+
+Editable `.drawio.svg` files render as images and reopen in draw.io
+
+![center](img/pipeline.drawio.svg)
+
+<!-- Built with the drawio-diagrams skill from img/pipeline.spec.json.
+Use Mermaid for quick inline diagrams; use draw.io when the figure must
+stay editable in a visual editor. -->
 
 ---
 

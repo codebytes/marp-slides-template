@@ -1,0 +1,16 @@
+{
+  "nodes": [
+    { "id": "author", "label": "Author\nslides/Slides.md", "x": 40, "y": 60, "width": 150, "height": 64, "fill": "#dae8fc", "stroke": "#0366d6", "fontColor": "#0b2b52", "rounded": true },
+    { "id": "review", "label": "Review\nfor overflow", "x": 240, "y": 60, "width": 150, "height": 64, "fill": "#dae8fc", "stroke": "#0366d6", "fontColor": "#0b2b52", "rounded": true },
+    { "id": "build", "label": "Marp CLI\nBuild (HTML + PDF)", "x": 440, "y": 60, "width": 160, "height": 64, "fill": "#e1d5e7", "stroke": "#9673a6", "fontColor": "#3a2b47", "rounded": true },
+    { "id": "actions", "label": "GitHub Actions\nWorkflow", "x": 650, "y": 60, "width": 150, "height": 64, "fill": "#ffe6cc", "stroke": "#d79b00", "fontColor": "#5a3b00", "rounded": true },
+    { "id": "pages", "label": "GitHub Pages\nSite", "x": 545, "y": 200, "width": 150, "height": 64, "fill": "#d5e8d4", "stroke": "#82b366", "fontColor": "#204020", "rounded": true }
+  ],
+  "edges": [
+    { "source": "author", "target": "review" },
+    { "source": "review", "target": "build" },
+    { "source": "build", "target": "actions" },
+    { "source": "actions", "target": "pages", "label": "deploy", "orthogonal": true },
+    { "source": "review", "target": "author", "label": "fix", "orthogonal": true }
+  ]
+}

@@ -2,6 +2,14 @@
     "markdown.marp.diagnostics.slideContentOverflow": true,
     "markdown.marp.html": "all",
     "markdown.marp.themes": [
-        "./slides/themes/custom-default.css"
-    ]
+        "./slides/themes/custom-default.css",
+        "./slides/themes/custom-gaia.css",
+        "./slides/themes/custom-uncover.css",
+        "\\slides\\themes\\custom-default.css",
+        "\\slides\\themes\\custom-gaia.css",
+        "\\slides\\themes\\custom-uncover.css"
+    ],
+    "markdown.marp.exportType": "html",
+    "markdown.marp.pptx.editable": "smart",
+   
 }

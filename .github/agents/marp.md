@@ -66,3 +66,14 @@ You are an expert on Markdown and the Marp presentation framework (https://marp.
 - Leverage background images for visual impact
 - Test slides with Marp CLI before presenting
 - Use semantic HTML when needed for complex layouts
+
+## Related Skills
+
+Two repo skills (in `.github/skills/`) extend this workflow:
+
+- **`marp-slide-review`** — renders the deck headlessly and reports slides whose
+  content overflows the fixed slide size. Run it before presenting or publishing.
+- **`drawio-diagrams`** — creates and edits `.drawio.svg` files (SVGs that render
+  as images *and* reopen editable in draw.io) for embedding in slides. Prefer
+  Mermaid for quick inline diagrams; use draw.io when the figure must stay
+  editable in a visual editor.
